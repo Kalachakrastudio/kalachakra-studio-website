@@ -5,23 +5,14 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Kalachakra Studio</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<!-- Scroll Progress -->
-<div class="scroll-progress"></div>
-
-<!-- Cursor -->
-<div class="cursor"></div>
-<div class="cursor-follower"></div>
-
-<!-- Overlay -->
 <div class="menu-overlay" id="menuOverlay"></div>
 
-<!-- NAVBAR -->
 <header class="navbar">
   <div class="nav-container">
 
@@ -46,7 +37,6 @@
   </div>
 </header>
 
-<!-- HERO -->
 <section class="hero" id="home">
   <div class="hero-content">
     <h1>Elite Digital Experiences</h1>
@@ -55,8 +45,7 @@
   </div>
 </section>
 
-<!-- SERVICES -->
-<section class="services reveal" id="services">
+<section class="services" id="services">
   <h2>Our Expertise</h2>
 
   <div class="service-grid">
@@ -80,7 +69,6 @@
   </div>
 </section>
 
-<!-- WORK SLIDESHOW -->
 <section class="slideshow" id="work">
   <div class="slides">
     <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=1600" class="active">
@@ -89,26 +77,13 @@
   </div>
 </section>
 
-<!-- CONTACT -->
-<section class="contact reveal" id="contact">
+<section class="contact" id="contact">
   <h2>Let’s Build Something Exceptional</h2>
 
   <form action="https://formspree.io/f/your-form-id" method="POST" class="contact-form">
-    <div class="input-group">
-      <input type="text" name="name" required>
-      <label>Name</label>
-    </div>
-
-    <div class="input-group">
-      <input type="email" name="email" required>
-      <label>Email</label>
-    </div>
-
-    <div class="input-group">
-      <textarea name="message" rows="4" required></textarea>
-      <label>Message</label>
-    </div>
-
+    <input type="text" name="name" placeholder="Your Name" required>
+    <input type="email" name="email" placeholder="Your Email" required>
+    <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
     <button type="submit" class="btn">Send Message</button>
   </form>
 </section>
