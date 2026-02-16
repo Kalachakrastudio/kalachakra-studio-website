@@ -1,4 +1,3 @@
-/* RESET */
 * {
     margin: 0;
     padding: 0;
@@ -7,15 +6,9 @@
 
 body {
     font-family: 'Poppins', sans-serif;
-    background: #0f1c22;
-    color: #ffffff;
-}
-
-/* CONTAINER */
-.container {
-    width: 90%;
-    max-width: 1200px;
-    margin: auto;
+    background: #18182d;
+    color: #fafbfc;
+    overflow-x: hidden;
 }
 
 /* NAVBAR */
@@ -23,148 +16,184 @@ body {
     position: fixed;
     width: 100%;
     top: 0;
-    padding: 25px 0;
     z-index: 1000;
+    padding: 20px 50px;
     background: transparent;
 }
 
 .nav-container {
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    justify-content: space-between;
 }
 
-.navbar a {
-    color: #ffffff;
+.logo img {
+    width: 120px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 40px;
+}
+
+nav ul li a {
     text-decoration: none;
-    margin-left: 30px;
+    color: #fafbfc;
     font-weight: 500;
+    transition: 0.3s;
 }
 
-.logo {
-    font-weight: 700;
-    letter-spacing: 2px;
+nav ul li a:hover {
+    color: #ffcc00;
 }
 
 /* HERO */
 .hero {
     height: 100vh;
-    background: url('https://images.unsplash.com/photo-1500530855697-b586d89ba3ee') center/cover no-repeat;
-    position: relative;
+    background: url('https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=1920') center/cover no-repeat;
     display: flex;
     align-items: center;
-    padding-top: 80px;
+    justify-content: center;
+    text-align: center;
+    position: relative;
 }
 
-.hero-overlay {
+.overlay {
     position: absolute;
     width: 100%;
     height: 100%;
-    background: linear-gradient(to bottom, rgba(0,0,0,0.5), #0f1c22);
+    background: rgba(24, 24, 45, 0.7);
 }
 
 .hero-content {
     position: relative;
-    max-width: 700px;
-    margin-left: 10%;
-}
-
-.hero h5 {
-    letter-spacing: 3px;
-    margin-bottom: 15px;
-    color: #d4af37;
+    z-index: 2;
+    max-width: 800px;
 }
 
 .hero h1 {
     font-size: 60px;
-    line-height: 1.1;
     margin-bottom: 20px;
 }
 
 .hero p {
     font-size: 18px;
+    opacity: 0.8;
 }
 
-/* SECTIONS */
-.section {
-    padding: 120px 0;
+/* SERVICES */
+.services {
+    padding: 120px 50px;
 }
 
-.dark {
-    background: #0f1c22;
+.container {
+    max-width: 1200px;
+    margin: auto;
 }
 
-.flex {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 60px;
+.services h2 {
+    text-align: center;
+    margin-bottom: 60px;
 }
 
-.reverse {
-    flex-direction: row-reverse;
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
 }
 
-.text-block {
-    flex: 1;
+.card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 10px;
 }
 
-.text-block .number {
-    font-size: 80px;
-    opacity: 0.08;
-    position: absolute;
-    font-weight: 700;
+.card h3 {
+    margin-top: 20px;
 }
 
-.text-block h2 {
-    font-size: 36px;
-    margin-bottom: 20px;
+.card p {
+    opacity: 0.7;
+}
+
+/* SLIDESHOW */
+.slideshow {
+    height: 70vh;
+    overflow: hidden;
     position: relative;
 }
 
-.text-block p {
-    color: #c7d1d6;
-}
-
-.image-block {
-    flex: 1;
-}
-
-.image-block img {
+.slides img {
     width: 100%;
-    border-radius: 6px;
+    height: 70vh;
+    object-fit: cover;
+    position: absolute;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.slides img.active {
+    opacity: 1;
+}
+
+/* CONTACT */
+.contact {
+    padding: 120px 50px;
+    text-align: center;
 }
 
 /* FOOTER */
 footer {
-    background: #081317;
-    padding: 60px 0;
+    padding: 30px;
+    text-align: center;
+    background: #111;
 }
 
-.footer-content {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
+/* HAMBURGER */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
 }
 
-/* RESPONSIVE */
-@media (max-width: 992px) {
+.hamburger span {
+    width: 25px;
+    height: 3px;
+    background: #fafbfc;
+}
 
-    .hero h1 {
-        font-size: 40px;
+/* MOBILE */
+@media (max-width: 768px) {
+
+    nav {
+        position: fixed;
+        top: 0;
+        left: -100%;
+        width: 70%;
+        height: 100vh;
+        background: #18182d;
+        padding-top: 100px;
+        transition: 0.4s;
     }
 
-    .flex {
+    nav ul {
         flex-direction: column;
+        gap: 30px;
         text-align: center;
     }
 
-    .reverse {
-        flex-direction: column;
+    nav.active {
+        left: 0;
     }
 
-    .hero-content {
-        margin-left: 5%;
-        margin-right: 5%;
+    .hamburger {
+        display: flex;
+    }
+
+    .hero h1 {
+        font-size: 38px;
     }
 }
