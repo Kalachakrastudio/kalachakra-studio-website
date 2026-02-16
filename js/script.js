@@ -28,8 +28,8 @@ closeBtn.onclick = closeMenu;
 overlay.onclick = closeMenu;
 
 /* CLOSE WHEN LINK CLICKED */
-document.querySelectorAll(".nav-link").forEach(link=>{
-    link.onclick = closeMenu;
+console.log("JS Loaded");
+
 });
 
 };
