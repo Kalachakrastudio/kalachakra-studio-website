@@ -1,94 +1,100 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Kalachakra Studio</title>
+    <meta charset="UTF-8">
+    <title>Kalachakra Studio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<link rel="stylesheet" href="style.css">
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-<!-- NAVBAR -->
+<!-- ================= NAVBAR ================= -->
 <header class="navbar">
-    <div class="container nav-container">
-        <div class="logo">KALACHAKRA</div>
-        <nav>
-            <a href="#about">About</a>
-            <a href="#services">Services</a>
-            <a href="#contact">Contact</a>
+    <div class="nav-container">
+        <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <div class="logo">
+            <img src="https://images.unsplash.com/photo-1523726491678-bf852e717f6a?w=120" alt="Logo">
+        </div>
+
+        <nav id="nav-menu">
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#work">Work</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
         </nav>
     </div>
 </header>
 
-<!-- HERO -->
-<section class="hero">
-    <div class="hero-overlay"></div>
+<!-- ================= HERO SECTION ================= -->
+<section class="hero" id="home">
+    <div class="overlay"></div>
     <div class="hero-content">
-        <h5>PREMIUM CREATIVE STUDIO</h5>
-        <h1>Build Brands<br>That Inspire & Grow</h1>
-        <p>We craft powerful brand identities and digital experiences for ambitious businesses.</p>
+        <h1>Creative. Cinematic. Digital.</h1>
+        <p>We craft immersive digital experiences that elevate brands.</p>
     </div>
 </section>
 
-<!-- SECTION 01 -->
-<section class="section dark">
-    <div class="container flex">
-        <div class="text-block">
-            <span class="number">01</span>
-            <h2>Brand Identity</h2>
-            <p>Creating strong and consistent visual systems that represent your brand across all platforms and digital touchpoints.</p>
-        </div>
-        <div class="image-block">
-            <img src="https://images.unsplash.com/photo-1559028012-481c04fa702d" alt="">
-        </div>
-    </div>
-</section>
+<!-- ================= SERVICES ================= -->
+<section class="services" id="services">
+    <div class="container">
+        <h2>Our Services</h2>
 
-<!-- SECTION 02 -->
-<section class="section dark">
-    <div class="container flex reverse">
-        <div class="text-block">
-            <span class="number">02</span>
-            <h2>Social Media Presence</h2>
-            <p>Strategic content planning, execution, and engagement management designed to grow your brand visibility.</p>
-        </div>
-        <div class="image-block">
-            <img src="https://images.unsplash.com/photo-1556740749-887f6717d7e4" alt="">
-        </div>
-    </div>
-</section>
+        <div class="service-grid">
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1492724441997-5dc865305da7?w=600" alt="">
+                <h3>Brand Strategy</h3>
+                <p>Strategic storytelling to define your brand identity.</p>
+            </div>
 
-<!-- SECTION 03 -->
-<section class="section dark">
-    <div class="container flex">
-        <div class="text-block">
-            <span class="number">03</span>
-            <h2>Digital Campaigns</h2>
-            <p>Creative campaigns crafted to increase reach, drive engagement, and strengthen brand awareness.</p>
-        </div>
-        <div class="image-block">
-            <img src="https://images.unsplash.com/photo-1492724441997-5dc865305da7" alt="">
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=600" alt="">
+                <h3>Web Development</h3>
+                <p>Modern and responsive websites that convert.</p>
+            </div>
+
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=600" alt="">
+                <h3>Creative Production</h3>
+                <p>Cinematic visuals that leave lasting impressions.</p>
+            </div>
         </div>
     </div>
 </section>
 
-<!-- FOOTER -->
-<footer id="contact">
-    <div class="container footer-content">
-        <div>
-            <h3>Kalachakra Studio</h3>
-            <p>Nashik (MH)</p>
-            <p>9175712711</p>
-            <p>kalachakrastudio@gmail.com</p>
-        </div>
-        <div>
-            <p>© 2026 Kalachakra Studio</p>
-        </div>
+<!-- ================= SLIDESHOW ================= -->
+<section class="slideshow" id="work">
+    <div class="slides">
+        <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=1600" class="active">
+        <img src="https://images.unsplash.com/photo-1492724441997-5dc865305da7?w=1600">
+        <img src="https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?w=1600">
     </div>
+</section>
+
+<!-- ================= CONTACT ================= -->
+<section class="contact" id="contact">
+    <div class="container">
+        <h2>Let's Build Something Powerful</h2>
+        <p>Contact us to start your next project.</p>
+    </div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer>
+    <p>© 2026 Kalachakra Studio. All Rights Reserved.</p>
 </footer>
 
+<script src="js/script.js"></script>
 </body>
 </html>
