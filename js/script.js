@@ -1,16 +1,21 @@
-document.addEventListener("DOMContentLoaded", function(){
+window.onload = function(){
 
 const hamburger = document.getElementById("hamburger");
 const navMenu = document.getElementById("nav-menu");
 const closeBtn = document.getElementById("closeBtn");
 const overlay = document.getElementById("menuOverlay");
 
+if(!hamburger || !navMenu || !closeBtn){
+    console.log("Menu elements not found");
+    return;
+}
+
 /* OPEN MENU */
-hamburger.addEventListener("click", function(){
+hamburger.onclick = function(){
     navMenu.classList.add("active");
     overlay.classList.add("active");
     document.body.style.overflow = "hidden";
-});
+};
 
 /* CLOSE MENU */
 function closeMenu(){
@@ -19,38 +24,12 @@ function closeMenu(){
     document.body.style.overflow = "auto";
 }
 
-closeBtn.addEventListener("click", closeMenu);
-overlay.addEventListener("click", closeMenu);
+closeBtn.onclick = closeMenu;
+overlay.onclick = closeMenu;
 
-/* CLOSE WHEN CLICK LINK */
+/* CLOSE WHEN LINK CLICKED */
 document.querySelectorAll(".nav-link").forEach(link=>{
-    link.addEventListener("click", closeMenu);
+    link.onclick = closeMenu;
 });
 
-/* SLIDESHOW */
-const slides = document.querySelectorAll(".slides img");
-let index = 0;
-
-setInterval(()=>{
-    slides[index].classList.remove("active");
-    index = (index + 1) % slides.length;
-    slides[index].classList.add("active");
-},4500);
-
-/* SCROLL REVEAL */
-const revealElements = document.querySelectorAll(".card, .hero-content, .contact-form");
-
-function reveal(){
-    const trigger = window.innerHeight * 0.85;
-    revealElements.forEach(el=>{
-        const top = el.getBoundingClientRect().top;
-        if(top < trigger){
-            el.classList.add("show");
-        }
-    });
-}
-
-window.addEventListener("scroll", reveal);
-reveal();
-
-});
+};
