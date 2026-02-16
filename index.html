@@ -17,24 +17,30 @@
 <!-- NAVBAR -->
 <header class="navbar">
     <div class="nav-container">
+
+        <!-- HAMBURGER -->
         <div class="hamburger" id="hamburger">
             <span></span>
             <span></span>
             <span></span>
         </div>
 
+        <!-- LOGO -->
         <div class="logo">
             <img src="https://images.unsplash.com/photo-1523726491678-bf852e717f6a?w=120" alt="">
         </div>
 
+        <!-- NAV MENU -->
         <nav id="nav-menu">
+            <div class="close-btn" id="closeBtn">✕</div>
             <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#work">Work</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#services" class="nav-link">Services</a></li>
+                <li><a href="#work" class="nav-link">Work</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
             </ul>
         </nav>
+
     </div>
 </header>
 
@@ -87,11 +93,19 @@
 </section>
 
 <!-- CONTACT -->
-<section class="contact reveal" id="contact">
-    <h2>Let’s Build Something Exceptional</h2>
-    <p>Start your premium digital journey today.</p>
-    <a href="#" class="btn">Contact Us</a>
+<section class="contact" id="contact">
+    <div class="contact-container">
+        <h2>Let’s Build Something Exceptional</h2>
+
+        <form action="https://formspree.io/f/your-form-id" method="POST" class="contact-form">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+            <button type="submit" class="btn">Send Message</button>
+        </form>
+    </div>
 </section>
+
 
 <footer>
     <p>© 2026 Kalachakra Studio. All Rights Reserved.</p>
