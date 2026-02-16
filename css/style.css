@@ -70,24 +70,19 @@ width:100%;
 
 /* Hamburger */
 
-.hamburger{
-display:none;
-flex-direction:column;
-gap:5px;
-cursor:pointer;
-z-index:3000;
+.hamburger {
+    position: relative;
+    z-index: 3001;
 }
 
-.hamburger span{
-width:25px;
-height:2px;
-background:#fafbfc;
-transition:.4s;
+nav {
+    z-index: 3000;
 }
 
-.close-btn{
-display:none;
+.menu-overlay {
+    z-index: 2500;
 }
+
 
 /* =============== HERO ================= */
 
