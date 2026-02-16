@@ -6,111 +6,117 @@
 <title>Kalachakra Studio</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/style.css">
-
+<link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-<!-- PRELOADER -->
-<div class="loader"></div>
+<!-- Scroll Progress -->
+<div class="scroll-progress"></div>
+
+<!-- Cursor -->
+<div class="cursor"></div>
+<div class="cursor-follower"></div>
+
+<!-- Overlay -->
+<div class="menu-overlay" id="menuOverlay"></div>
 
 <!-- NAVBAR -->
 <header class="navbar">
-    <div class="nav-container">
+  <div class="nav-container">
 
-        <!-- HAMBURGER -->
-        <div class="hamburger" id="hamburger">
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
-
-        <!-- LOGO -->
-        <div class="logo">
-            <img src="https://images.unsplash.com/photo-1523726491678-bf852e717f6a?w=120" alt="">
-        </div>
-
-        <!-- NAV MENU -->
-        <nav id="nav-menu">
-            <div class="close-btn" id="closeBtn">✕</div>
-            <ul>
-                <li><a href="#home" class="nav-link">Home</a></li>
-                <li><a href="#services" class="nav-link">Services</a></li>
-                <li><a href="#work" class="nav-link">Work</a></li>
-                <li><a href="#contact" class="nav-link">Contact</a></li>
-            </ul>
-        </nav>
-
+    <div class="hamburger" id="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
     </div>
+
+    <div class="logo">Kalachakra Studio</div>
+
+    <nav id="nav-menu">
+      <div class="close-btn" id="closeBtn">&times;</div>
+      <ul>
+        <li><a href="#home" class="nav-link">Home</a></li>
+        <li><a href="#services" class="nav-link">Services</a></li>
+        <li><a href="#work" class="nav-link">Work</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+    </nav>
+
+  </div>
 </header>
 
 <!-- HERO -->
 <section class="hero" id="home">
-    <div class="overlay"></div>
-    <div class="hero-content">
-        <h1>We Create Cinematic Digital Experiences</h1>
-        <p>Premium branding, web & creative production studio.</p>
-        <a href="#services" class="btn">Explore Services</a>
-    </div>
+  <div class="hero-content">
+    <h1>Elite Digital Experiences</h1>
+    <p>Premium branding, web and cinematic production studio.</p>
+    <a href="#services" class="btn">Explore</a>
+  </div>
 </section>
 
 <!-- SERVICES -->
-<section class="services" id="services">
-    <div class="container">
-        <h2>Our Expertise</h2>
+<section class="services reveal" id="services">
+  <h2>Our Expertise</h2>
 
-        <div class="service-grid">
-
-            <div class="card reveal">
-                <img src="https://images.unsplash.com/photo-1492724441997-5dc865305da7?w=800">
-                <h3>Brand Strategy</h3>
-                <p>Strategic storytelling for visionary brands.</p>
-            </div>
-
-            <div class="card reveal">
-                <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=800">
-                <h3>Web Development</h3>
-                <p>Modern, responsive and scalable digital products.</p>
-            </div>
-
-            <div class="card reveal">
-                <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=800">
-                <h3>Creative Production</h3>
-                <p>High-end visuals and cinematic storytelling.</p>
-            </div>
-
-        </div>
+  <div class="service-grid">
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1492724441997-5dc865305da7?w=800">
+      <h3>Brand Strategy</h3>
+      <p>Vision-driven identity systems.</p>
     </div>
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=800">
+      <h3>Web Development</h3>
+      <p>Modern responsive architecture.</p>
+    </div>
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?w=800">
+      <h3>Creative Production</h3>
+      <p>Cinematic storytelling visuals.</p>
+    </div>
+  </div>
 </section>
 
-<!-- SLIDESHOW -->
+<!-- WORK SLIDESHOW -->
 <section class="slideshow" id="work">
-    <div class="slides">
-        <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=1600" class="active">
-        <img src="https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?w=1600">
-        <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=1600">
-    </div>
+  <div class="slides">
+    <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=1600" class="active">
+    <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=1600">
+    <img src="https://images.unsplash.com/photo-1492724441997-5dc865305da7?w=1600">
+  </div>
 </section>
 
 <!-- CONTACT -->
-<section class="contact" id="contact">
-    <div class="contact-container">
-        <h2>Let’s Build Something Exceptional</h2>
+<section class="contact reveal" id="contact">
+  <h2>Let’s Build Something Exceptional</h2>
 
-        <form action="https://formspree.io/f/your-form-id" method="POST" class="contact-form">
-            <input type="text" name="name" placeholder="Your Name" required>
-            <input type="email" name="email" placeholder="Your Email" required>
-            <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
-            <button type="submit" class="btn">Send Message</button>
-        </form>
+  <form action="https://formspree.io/f/your-form-id" method="POST" class="contact-form">
+    <div class="input-group">
+      <input type="text" name="name" required>
+      <label>Name</label>
     </div>
+
+    <div class="input-group">
+      <input type="email" name="email" required>
+      <label>Email</label>
+    </div>
+
+    <div class="input-group">
+      <textarea name="message" rows="4" required></textarea>
+      <label>Message</label>
+    </div>
+
+    <button type="submit" class="btn">Send Message</button>
+  </form>
 </section>
 
-
 <footer>
-    <p>© 2026 Kalachakra Studio. All Rights Reserved.</p>
+  © 2026 Kalachakra Studio
 </footer>
 
-<script src="js/script.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
