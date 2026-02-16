@@ -1,39 +1,27 @@
-const cursor=document.querySelector('.cursor');
-const follower=document.querySelector('.cursor-follower');
-const progress=document.querySelector('.scroll-progress');
-const slides=document.querySelectorAll('.slides img');
-const hamburger=document.getElementById('hamburger');
-const nav=document.getElementById('nav-menu');
-const closeBtn=document.getElementById('closeBtn');
-const overlay=document.getElementById('menuOverlay');
+const hamburger = document.getElementById("hamburger");
+const navMenu = document.getElementById("nav-menu");
+const closeBtn = document.getElementById("closeBtn");
+const overlay = document.getElementById("menuOverlay");
 
-let current=0;
-
-/* Cursor */
-document.addEventListener('mousemove',e=>{
-cursor.style.left=e.clientX+'px';
-cursor.style.top=e.clientY+'px';
-follower.style.left=e.clientX-17+'px';
-follower.style.top=e.clientY-17+'px';
+hamburger.addEventListener("click", () => {
+  navMenu.classList.add("active");
+  overlay.classList.add("active");
 });
 
-/* Scroll Progress */
-window.addEventListener('scroll',()=>{
-let scrollTop=window.scrollY;
-let height=document.body.scrollHeight-window.innerHeight;
-progress.style.width=(scrollTop/height)*100+"%";
-});
+closeBtn.addEventListener("click", closeMenu);
+overlay.addEventListener("click", closeMenu);
+
+function closeMenu(){
+  navMenu.classList.remove("active");
+  overlay.classList.remove("active");
+}
 
 /* Slideshow */
-function showSlide(){
-slides.forEach(s=>s.classList.remove('active'));
-slides[current].classList.add('active');
-current=(current+1)%slides.length;
-}
-setInterval(showSlide,5000);
+const slides = document.querySelectorAll(".slides img");
+let index = 0;
 
-/* Mobile Menu */
-hamburger.addEventListener('click',()=>{
-nav.classList.toggle('active');
-hamburger.classList.toggle('active');
-});
+setInterval(() => {
+  slides[index].classList.remove("active");
+  index = (index + 1) % slides.length;
+  slides[index].classList.add("active");
+}, 4000);
