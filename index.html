@@ -6,13 +6,14 @@
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 <script>
-    const toggle = document.getElementById("menuToggle");
-    const nav = document.getElementById("navLinks");
+const menuToggle = document.getElementById("menuToggle");
+const navLinks = document.getElementById("navLinks");
 
-    toggle.addEventListener("click", function () {
-        nav.classList.toggle("active");
-    });
+menuToggle.addEventListener("click", function () {
+    navLinks.classList.toggle("active");
+});
 </script>
+
 
 </head>
 
@@ -20,12 +21,22 @@
 
 <header class="navbar">
     <div class="container nav-wrapper">
+
+        <!-- MOBILE HAMBURGER -->
+        <div class="menu-toggle" id="menuToggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <!-- LOGO -->
         <div class="logo">
             <a href="index.html">
                 <img src="logo.png" alt="Kalachakra Studio">
             </a>
         </div>
 
+        <!-- LINKS -->
         <div class="nav-links" id="navLinks">
             <a href="index.html">Home</a>
             <a href="services.html">Services</a>
@@ -33,13 +44,9 @@
             <a href="contact.html">Contact</a>
         </div>
 
-        <div class="menu-toggle" id="menuToggle">
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
     </div>
 </header>
+
 
 
 <section class="hero">
