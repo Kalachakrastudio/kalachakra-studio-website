@@ -120,3 +120,40 @@ body {
 
 .card {
     background: #ffffff;
+
+    /* DEFAULT NAV LINKS */
+.nav-links {
+    display: flex;
+    gap: 30px;
+}
+
+/* HIDE ON MOBILE */
+@media (max-width: 992px) {
+    .nav-links {
+        position: absolute;
+        top: 75px;
+        left: -100%;
+        background: #18182d;
+        width: 100%;
+        flex-direction: column;
+        text-align: center;
+        padding: 20px 0;
+        transition: 0.3s ease-in-out;
+    }
+
+    .nav-links.active {
+        left: 0;
+    }
+
+    .menu-toggle {
+        display: flex;
+        cursor: pointer;
+    }
+}
+
+@media (min-width: 993px) {
+    .menu-toggle {
+        display: none;
+    }
+}
+
