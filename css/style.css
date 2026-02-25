@@ -51,7 +51,9 @@ body{
     -webkit-background-clip:text;
     -webkit-text-fill-color:transparent;
 }
-
+.logo a{
+    text-decoration:none;
+}
 .nav{
     display:flex;
     gap:40px;
@@ -193,13 +195,18 @@ body{
 }
 
 .about-header .line {
-    width: 60px;
+    width: 0; /* start collapsed */
     height: 3px;
-    background: #9e8f78;
+    background: #9e8f78; /* your brand accent */
     margin: 10px auto 0;
     border-radius: 2px;
+    transition: width 1s ease-out;
 }
 
+/* Active class triggered on scroll */
+.about-header .line.active {
+    width: 60px; /* full width */
+}
 /* MAIN CONTENT */
 .about-main {
     display: flex;
@@ -232,7 +239,7 @@ body{
 }
 
 .card p {
-    color: #ccc;
+    color: #a9a5a0;
     font-size: 14px;
     line-height: 1.5;
 }
@@ -289,7 +296,7 @@ body{
 /* SERVICES */
 .service-grid{
     display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    grid-template-columns:repeat(auto-fit,minmax(350px,1fr));
     gap:30px;
 }
 
@@ -305,6 +312,9 @@ body{
 .service-card:hover{
     transform:translateY(-10px);
     box-shadow:0 0 35px #9e8f78;
+}
+.service-card p {
+    color: #a9a5a0;
 }
 
 /* CONTACT FORM */
