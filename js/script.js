@@ -34,3 +34,62 @@ gsap.utils.toArray(".service-card").forEach(card => {
         ease: "power3.out"
     });
 });
+document.addEventListener("DOMContentLoaded", () => {
+    const line = document.querySelector('.about-header .line');
+
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if(entry.isIntersecting){
+                line.classList.add('active');
+            }
+        });
+    }, { threshold: 0.5 }); // triggers when 50% of about section is visible
+
+    observer.observe(document.querySelector('.about-header'));
+});
+
+
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    const form = document.getElementById("contact-form");
+    const feedback = document.getElementById("form-feedback");
+
+    form.addEventListener("submit", async function (e) {
+        e.preventDefault();
+
+        const formData = new FormData(form);
+
+        try {
+            const response = await fetch(form.action, {
+                method: "POST",
+                body: formData,
+                headers: {
+                    Accept: "application/json"
+                }
+            });
+
+            if (response.ok) {
+                showMessage("Message sent successfully! 🚀", "#9e8f78");
+                form.reset();
+            } else {
+                showMessage("Oops! Something went wrong.", "red");
+            }
+
+        } catch (error) {
+            showMessage("Network error. Please try again.", "red");
+        }
+    });
+
+    function showMessage(message, color) {
+        feedback.style.display = "block";
+        feedback.style.color = color;
+        feedback.textContent = message;
+
+        setTimeout(() => {
+            feedback.style.display = "none";
+            feedback.textContent = "";
+        }, 4000);
+    }
+
+});
